@@ -64,4 +64,5 @@ class VideoProcessor:
 
 webrtc_streamer(key="test",
                 video_processor_factory=VideoProcessor,
-                media_stream_constraints={"video": True,"audio": False})
+                media_stream_constraints={"video": True,"audio": False},
+                rtc_configuration={"iceServers":token.ice_servers}) ###
