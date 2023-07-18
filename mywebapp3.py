@@ -5,6 +5,16 @@ import cv2
 import numpy as np
 import mediapipe as mp
 
+#-----------------------------------------------
+import os
+from twilio.rest import Client
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
+client = Client(account_sid, auth_token)
+token = client.tokens.create()
+#-----------------------------------------------
+
+
 face_mesh = mp.solutions.face_mesh.FaceMesh(max_num_faces=1)
 
 font = cv2.FONT_HERSHEY_SIMPLEX
