@@ -14,7 +14,7 @@ client = Client(account_sid, auth_token)
 token = client.tokens.create()
 #-----------------------------------------------
 
-hands = mp.solutions.hands.Hands(max_num_hands=2)
+hands = mp.solutions.hands.Hands(max_num_hands=1)
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 
